@@ -1,9 +1,10 @@
 package sg.edu.nus.iss.day16workshop.model;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.UUID;
 
-public class Game {
+public class Game implements Serializable {
     
     // put in the relevant validations you feel required yourself
     // to practice and test your understanding on spring validation
@@ -69,5 +70,12 @@ public class Game {
     public void setGameDate(Date gameDate) {
         this.gameDate = gameDate;
     }
+
+    @Override
+    public String toString() {
+        return "Game [gameId=" + gameId + ", homeTeam=" + homeTeam + ", oppTeam=" + oppTeam + ", venue=" + venue
+                + ", gameDate=" + gameDate + "]";
+    }
+    
     
 }

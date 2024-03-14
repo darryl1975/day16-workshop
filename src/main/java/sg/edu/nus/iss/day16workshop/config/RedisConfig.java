@@ -62,10 +62,10 @@ public class RedisConfig {
 
         RedisTemplate<String, Game> template = new RedisTemplate<>();
         template.setConnectionFactory(jedisConnectionFactory());
-        template.setKeySerializer(new StringRedisSerializer());
-        template.setValueSerializer(new StringRedisSerializer());
-        template.setHashKeySerializer(new StringRedisSerializer());
-        template.setHashValueSerializer(new StringRedisSerializer());
+        // template.setKeySerializer(new StringRedisSerializer());
+        // template.setValueSerializer(new StringRedisSerializer());
+        // template.setHashKeySerializer(new StringRedisSerializer());
+        // template.setHashValueSerializer(new StringRedisSerializer());
 
         return template;
     }
